@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Questions</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+        #exam-container {
+            width: 90%;
+            height: 90%;
+            background-color: #f5f5f5;
+            border: 1px solid #ccc;
+            padding: 20px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="exam-container">
+        <h1>Exam Questions</h1>
+        <div id="questions"></div>
+    </div>
+    <script>
+        function requestFullScreen() {
+            var docEl = document.documentElement;
+            if (docEl.requestFullscreen) {
+                docEl.requestFullscreen();
+            } else if (docEl.mozRequestFullScreen) { // Firefox
+                docEl.mozRequestFullScreen();
+            } else if (docEl.webkitRequestFullScreen) { // Chrome, Safari, and Opera
+                docEl.webkitRequestFullScreen();
+            } else if (docEl.msRequestFullscreen) { // IE/Edge
+                docEl.msRequestFullscreen();
+            }
+        }
+
+        function loadQuestions() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const token = urlParams.get('token');
+            const examId = urlParams.get('Exam_id');
+            
+            fetch(`fetch_question.php?token=${token}&Exam_id=${examId}`)
+                .then(response => response.json())
+                .then(data => {
+                    const questionsContainer = document.getElementById('questions');
+                    if (data.error) {
+                        questionsContainer.innerHTML = `<p>${data.error}</p>`;
+                    } else {
+                        questionsContainer.innerHTML = data.map(question => `
+                            <div class="question">
+                                <h2>${question.question_text}</h2>
+                                <p>${question.answer}</p>
+                            </div>
+                        `).join('');
+                    }
+                })
+                .catch(error => console.error('Error:', error));
+        }
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            requestFullScreen();
+            loadQuestions();
+        });
+    </script>
+</body>
+</html>

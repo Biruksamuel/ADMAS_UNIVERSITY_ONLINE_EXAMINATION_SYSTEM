@@ -1,0 +1,102 @@
+body,
+body * {
+  padding: 0;
+  margin: 0;
+}
+body {
+  height: 80vh;
+  background-image: linear-gradient(rgb(4, 32, 72), white);
+  background-repeat: no-repeat;
+}
+.wrapper {
+  position: relative;
+  padding: 50px 30px;
+  max-width: 400px;
+  max-height: 160px;
+  width: 90%;
+  height: 400px;
+  border-radius: 5px;
+  background-color: rgb(165, 179, 206);
+  margin: 100px auto 0 auto;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+}
+
+.mainiconwrap {
+  padding: 10px 10px;
+  position: absolute;
+  border-radius: 20px;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -50%);
+  background-color: rgb(167, 204, 255);
+  box-shadow: 0 0 5px rgba(17, 48, 92, 0.5);
+}
+.mainicon {
+  font-size: 50px;
+}
+.inputwrap {
+  display: grid;
+
+  margin: 10px 0;
+  border-radius: 2px;
+  grid-template-columns: 15% 85%;
+  grid-template-rows: repeat(1, 1fr);
+  background-color: rgb(4, 32, 72);
+}
+.inputwrap * {
+  border-color: transparent;
+}
+.usernameicon,
+.passwordicon {
+  width: 90%;
+  gap: 0;
+  font-size: 20px;
+  height: 50px;
+  align-content: center;
+  color: white;
+  background-color: rgb(4, 32, 72);
+}
+.usernameicon .fa-solid,
+.passwordicon .fa-solid {
+  justify-self: center;
+  margin: 0 50%;
+  transform: translateX(-30%);
+}
+
+form button {
+  cursor: pointer;
+  font-size: 18px;
+  max-width: 300px;
+  width: 90%;
+  height: 40px;
+  border-color: transparent;
+  border-radius: 15px;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 70%);
+
+  background-color: rgb(165, 179, 206);
+
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+}
+
+.wrapper input {
+  color: white;
+  padding: 0 0 0 5px;
+  background-color: rgb(53, 84, 113);
+}
+
+/*mediaqueries*/
+@media screen and (max-width: 500px) {
+  .wrapper {
+    max-height: 200px;
+    padding: 10px 5px;
+  }
+  .mainicon {
+    font-size: 40px;
+  }
+  .firstinputwrap {
+    margin: 40px 0 0 0;
+  }
+}

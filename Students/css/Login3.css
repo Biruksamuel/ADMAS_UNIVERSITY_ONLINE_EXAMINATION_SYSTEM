@@ -1,0 +1,146 @@
+body *,
+body {
+  padding: 0px;
+  margin: 0px;
+}
+body {
+  background-color: rgb(125, 125, 255);
+}
+
+.loginwrapper {
+  width: 90%;
+  height: 500px;
+  max-width: 2000px;
+  margin: 5% auto;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.first {
+  background-color: white;
+  padding: 5% 20%;
+  border-radius: 5px 0 0 5px;
+}
+.first h1 {
+  text-align: center;
+  margin: 20px 0;
+  color: #0e66eb;
+}
+.first p {
+  justify-self: end;
+}
+.first input,
+.first button {
+  margin: 5px 0;
+  padding: 0 10px;
+  height: 40px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+#showPassword{
+  width: 20px;
+  height: 20px;
+  margin: 0 0 0 10px;
+}
+.flex{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.first button {
+  margin: 10px 0 15px 0;
+  width: 98%;
+  justify-self: center;
+  color: white;
+  border-color: transparent;
+  background-color: rgb(59, 59, 255);
+  cursor: pointer;
+}
+.first p:last-child {
+  padding-top: 15px;
+  border-top: 1px solid black;
+}
+.second img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0 5px 5px 0;
+}
+.loginwrapper form {
+  display: grid;
+}
+
+/*media queries*/
+@media screen and (max-width: 1200px) {
+  .loginwrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .first {
+    padding: 5px 20px;
+    border-radius: 5px;
+  }
+  .second {
+    display: none;
+  }
+}
+button:hover {
+  background-color: #003063;
+}
+body *, body{
+  margin: 0;
+  padding: 0;
+ 
+
+}
+.header {
+  color: white;
+  padding: 20px 30px;
+  display: flex;
+  align-items: center;
+  
+  border-radius: 25px;
+  text-align: center;
+  background-color: transparent;
+}
+.header img {
+  max-width: 160px;
+  max-height: 160px;
+  width: 90%;
+  border-radius: 50%;
+}
+.header h1{
+  margin: 0 0 0 15%;
+}
+
+@media screen and (max-width: 850px) {
+  .header h1{
+      font-size: 12w;
+     
+  }
+  .header{
+      padding: 5px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .header{
+      display: block;
+  }
+  .header h1{
+    font-size: 12w;
+    margin: 0;
+}
+}
+.links_load{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 400px;
+  height: 50px;
+  width: 90%;
+  margin: 20px auto 40px auto;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  background-color: rgb(84, 164, 255);
+}

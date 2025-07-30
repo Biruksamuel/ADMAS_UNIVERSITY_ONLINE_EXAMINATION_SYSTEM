@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Set Password</title>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="./css/setpass2.css" />
+        <link rel="icon" href="./admaslogo.jpg" type="image/x-icon">
+    </head>
+        <header class="header">
+            <div class="imgwrapper">
+                <img src="./images/admaslogo.jpg" alt="admaslogo" />
+            </div>
+            <h1>ADMAS UNIVERSITY <br/> ONLINE EXAMINATION SYSTEM</h1>
+        </header>
+<body>
+    <div class="container">
+        <form id="userForm">
+            <h2>SET PASSWORD</h2>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Enter username" required>
+
+            <label for="id">ID:</label>
+            <input type="text" id="id" name="id" placeholder="Enter ID" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter password" required>
+
+            <button type="button" onclick="validateUser()">Set Password</button> 
+        </form>
+
+        <div id="response"></div>
+    </div>
+
+    <script src="./js/setpass.js"></script>
+</body>
+</html>

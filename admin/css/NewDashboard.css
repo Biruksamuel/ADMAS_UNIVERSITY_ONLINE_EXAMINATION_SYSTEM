@@ -1,0 +1,321 @@
+body *,
+body {
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: rgb(168, 166, 166);
+  text-decoration: none;
+}
+
+.wrapper {
+  display: flex;
+ 
+  height: 100vh;
+}
+
+/* choose section*/
+.choosesection {
+  position: fixed;
+  display: flex;
+  width: 250px;
+  height: 100%;
+  background-color: rgb(33, 43, 54);
+  transform: translate(0, 0);
+  transition: 1s;
+  
+}
+.choosesection ul {
+  width: 100%;
+  margin: auto 0;
+  position: relative;
+  text-align: center;
+}
+.choosesection li {
+  text-align: left;
+  position: relative;
+  list-style-type: none;
+  margin: 50px 0 0 20px;
+  cursor: pointer;
+}
+.choosesection a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.atag {
+  color: rgb(168, 166, 166);
+}
+.atag:hover {
+  color: white;
+}
+
+.choosesection i {
+  margin: 0 10px;
+}
+/*close choose section*/
+.closechoosesection {
+  position: fixed;
+  width: 250px;
+  height: 100%;
+  background-color: aqua;
+  transform: translate(-251px, 0);
+  transition: 1s;
+}
+
+.closechoosesection i {
+  margin: 0 10px;
+}
+
+.selectedsection {
+  width: 100%;
+  margin: 0 0 0 250px;
+  transition: 1s;
+  background-color: #003063;
+}
+.fullscreen {
+  width: 100%;
+  margin: 0 0;
+  transition: 1s;
+}
+.visible {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-color: greenyellow;
+}
+.invisible {
+  display: none;
+}
+
+.headsection div{
+  display: flex;
+  align-items: center;
+}
+.headsection{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+  padding: 15px 0 15px 10px;
+}
+.headsection i {
+  cursor: pointer;
+  margin: 0 20px;
+}
+.headsection a button{
+  cursor: pointer;
+  color: white;
+  width: 90px;
+  height: 30px;
+  background-color: rgb(36, 36, 219);
+  border-color: transparent;
+  border-radius: 5px;
+}
+.headsection a button:hover{
+  color: rgb(36, 36, 219);
+  width: 90px;
+  height: 30px;
+  background-color: white;
+  border: 1px solid rgb(36, 36, 219);
+  border-radius: 5px;
+}
+#active {
+  color: white;
+}
+
+/*the below is load css*/
+
+body {
+  background-image: linear-gradient(rgb(66, 66, 255), rgb(255, 255, 255));
+  background-repeat: no-repeat;
+}
+.wrapper2 {
+  display: block;
+  
+  
+  padding: 10px 20px;
+  margin: 100px auto;
+  border-radius: 5px;
+  background-color: #003063;
+  overflow-x: hidden;
+}
+.wrapper2 form {
+  max-width: 600px;
+  width: 90%;
+  display: grid;
+  margin: auto;
+  padding: 0 10px;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  font-weight: 900;
+  font-size: 20px;
+  color: white;
+}
+.wrapper2 h1 {
+  text-align: center;
+  color: white;
+}
+.wrapper2 label {
+  align-self: center;
+}
+.wrapper2 input, .wrapper select {
+  width: 100%;
+  height: 40px;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 5px 0;
+ 
+}
+.wrapper2 button {
+  width: 100%;
+  height: 40px;
+  border-color: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  background-color: rgb(66, 66, 255);
+}
+
+.header {
+  color: white;
+  padding: 20px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  border-radius: 5px;
+  text-align: center;
+  background-color: transparent;
+}
+.header img {
+  max-width: 180px;
+  width: 50%;
+  border-radius: 50%;
+}
+.header h1{
+  margin-left: 15%;
+}
+@media screen and (max-width: 520px) {
+  .header {
+    padding: 5px 10px;
+  }
+  .header img {
+    display: none;
+  }
+}
+
+
+#response{
+  color: red;
+}
+/* Header styles */
+.header {
+  /* ... (rest of header styles) ... */
+  width: 95%;
+  border-radius: 20px;
+ 
+  display: flex;        /* Enable flexbox layout */
+  align-items: center;  
+  text-align: center;   /* Align items vertically center */
+}
+
+.imgwrapper {
+  margin-right: 20px;    /* Add space between image and text */
+}
+
+.header img {
+  max-width: 80px;      
+  max-height: 80px;     
+  width: auto;          
+  border-radius: 50%;
+}
+.header h1{
+  font-family: Arial;
+  text-align: center;
+  color: white;
+  margin-left: 200px;
+}
+
+/* ... rest of header styles ... */
+.mainsection{
+  display: flex;
+  background-color: #003063;
+}
+.container {
+  background-color: white;
+  padding: 30px;
+  width: 100%;
+  margin: 10% auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+  width: 400px; /* Adjust as needed */
+  max-width: 90%;
+}
+.header img {
+  max-width: 160px;
+  max-height: 160px;
+  width: 90%;
+  border-radius: 50%;
+}
+h2 {
+  font-size: xx-large;
+  color: #0e66eb;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+}
+
+.wrapper2 input:focus {
+  border-color: #0e66eb; /* Highlight color on focus */
+  outline: none;
+}
+
+.relativenoborder button {
+  background-color: #0e66eb;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: bold;
+  transition: background-color 0.3s; /* Smooth transition on hover */
+}
+
+button:hover {
+  background-color: #003063; /* Darker shade on hover */
+}
+#userForm button{
+  cursor: pointer;
+  color: white;
+  width: 90px;
+  height: 30px;
+  background-color: rgb(36, 36, 219);
+  border-color: transparent;
+  border-radius: 5px;
+}
+#userForm button:hover{
+  cursor: pointer;
+  color: rgb(36, 36, 219);
+  width: 90px;
+  height: 30px;
+  background-color: white;
+  border: 1px solid rgb(36, 36, 219);
+  border-radius: 5px;
+}
+/*schedule css*/

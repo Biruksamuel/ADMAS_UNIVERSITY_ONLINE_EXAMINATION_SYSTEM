@@ -1,0 +1,97 @@
+body {
+    background-color: #f0f2f5; /* Light gray background */
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Header Styles */
+.header {
+    width: 95%;
+    background-color: #0e66eb; /* Example header color */
+    color: white;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow */
+}
+
+.imgwrapper {
+    margin-right: 20px;
+}
+
+.header img {
+    max-width: 110px;
+    max-height: 110px;
+    width: auto;
+    border-radius: 50%;
+}
+
+.header h1 {  
+    font-family: Arial, sans-serif;
+    margin: auto; /* Remove default margin */
+}
+
+.container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    width: 400px; /* Adjust as needed */
+    max-width: 90%;
+}
+.header img {
+    max-width: 160px;
+    max-height: 160px;
+    width: 90%;
+    border-radius: 50%;
+  }
+h2 {
+    color: #0e66eb;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+
+input:focus {
+    border-color: #0e66eb; /* Highlight color on focus */
+    outline: none;
+}
+
+button {
+    background-color: #0e66eb;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    transition: background-color 0.3s; /* Smooth transition on hover */
+}
+
+button:hover {
+    background-color: #003063; /* Darker shade on hover */
+}
+
+/* ... rest of the styles ... */
